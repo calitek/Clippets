@@ -1,0 +1,504 @@
+[
+  {
+    "children": [
+      {
+        "children": [],
+        "nodeid": "1.4",
+        "selected": false,
+        "title": "Css",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "1.6",
+        "selected": false,
+        "title": "Gulp",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "1.3",
+        "selected": false,
+        "title": "Html",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "1.2",
+        "selected": false,
+        "title": "Javascript",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "1.17",
+        "selected": false,
+        "title": "npm",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "1.28",
+        "selected": false,
+        "title": "ConEmu",
+        "type": "dev"
+      }
+    ],
+    "closed": false,
+    "nodeid": "1",
+    "selected": false,
+    "title": "Dev",
+    "type": "dev"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "nodeid": "22.45",
+        "selected": false,
+        "title": "Lightroom",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "22.24",
+        "selected": false,
+        "title": "Clippets",
+        "type": "dev"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "nodeid": "22.79.80",
+            "selected": false,
+            "title": "cd mac",
+            "type": "dev"
+          }
+        ],
+        "closed": false,
+        "nodeid": "22.79",
+        "selected": false,
+        "title": "NodejsPatterns",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "22.23",
+        "selected": false,
+        "title": "PalmInfo",
+        "type": "dev"
+      },
+      {
+        "children": [
+          {
+            "children": [],
+            "nodeid": "22.32.55",
+            "selected": false,
+            "title": "Mocha/Enzyme",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "22.32.48",
+            "selected": false,
+            "title": "Gallery",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "22.32.34",
+            "selected": false,
+            "title": "Change directory mac",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "22.32.47",
+            "selected": false,
+            "title": "cd mac 12,13,14",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "22.32.50",
+            "selected": false,
+            "title": "cd mac 15",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "22.32.35",
+            "selected": false,
+            "title": "Change directory win",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "22.32.49",
+            "selected": false,
+            "title": "cd win 14",
+            "type": "dev"
+          }
+        ],
+        "closed": false,
+        "nodeid": "22.32",
+        "selected": false,
+        "title": "React Patterns",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "22.25",
+        "selected": false,
+        "title": "SpamProtester",
+        "type": "dev"
+      }
+    ],
+    "closed": false,
+    "nodeid": "22",
+    "selected": false,
+    "title": "Dev project todo's",
+    "type": "dev"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "nodeid": "7.8",
+        "selected": false,
+        "title": "Setup server",
+        "type": "sys"
+      }
+    ],
+    "closed": false,
+    "nodeid": "7",
+    "selected": false,
+    "title": "Internet",
+    "type": "sys"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "nodeid": "27.28",
+        "selected": false,
+        "title": "Clippets",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "27.43",
+        "selected": false,
+        "title": "ReactPatterns",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "27.44",
+        "selected": false,
+        "title": "SpamProtester",
+        "type": "dev"
+      }
+    ],
+    "closed": false,
+    "nodeid": "27",
+    "selected": false,
+    "title": "JMStevens GitHub",
+    "type": "dev"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "nodeid": "12.51",
+        "selected": false,
+        "title": "Nginx",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "12.30",
+        "selected": false,
+        "title": "DigitalOcean update remote",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "12.52",
+        "selected": false,
+        "title": "DigitalOcean Nginx droplet",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "12.13",
+        "selected": false,
+        "title": "node on server",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "12.14",
+        "selected": false,
+        "title": "github",
+        "type": "dev"
+      }
+    ],
+    "closed": false,
+    "nodeid": "12",
+    "selected": false,
+    "title": "Deployment",
+    "type": "dev"
+  },
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [],
+            "nodeid": "53.59.75",
+            "selected": false,
+            "title": "Common",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.60",
+            "selected": false,
+            "title": "BasicID",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.61",
+            "selected": false,
+            "title": "Clippets",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.62",
+            "selected": false,
+            "title": "CodeViewer",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.63",
+            "selected": false,
+            "title": "PalmInfo",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.64",
+            "selected": false,
+            "title": "ReactPatterns Basic",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.65",
+            "selected": false,
+            "title": "ReactPatterns ReFluxSuperAgent",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.66",
+            "selected": false,
+            "title": "ReactPatterns Buttons",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.67",
+            "selected": false,
+            "title": "ReactPatterns DropDown",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.68",
+            "selected": false,
+            "title": "ReactPatterns FormInputs",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.69",
+            "selected": false,
+            "title": "ReactPatterns Gallery",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.70",
+            "selected": false,
+            "title": "ReactPatterns List",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.71",
+            "selected": false,
+            "title": "ReactPatterns ProgressBar",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.72",
+            "selected": false,
+            "title": "ReactPatterns RangeSlider",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.73",
+            "selected": false,
+            "title": "ReactPatterns Tooltip",
+            "type": "dev"
+          },
+          {
+            "children": [],
+            "nodeid": "53.59.74",
+            "selected": false,
+            "title": "ReactPatterns TreeView",
+            "type": "dev"
+          }
+        ],
+        "closed": false,
+        "nodeid": "53.59",
+        "selected": false,
+        "title": "Online projects",
+        "type": "dev"
+      }
+    ],
+    "closed": false,
+    "nodeid": "53",
+    "selected": false,
+    "title": "Kykas Consulting",
+    "type": "home"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "nodeid": "76.29",
+        "selected": false,
+        "title": "DigitalOcean new droplet",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "76.77",
+        "selected": false,
+        "title": "MongoDB",
+        "type": "sys"
+      },
+      {
+        "children": [],
+        "nodeid": "76.54",
+        "selected": false,
+        "title": "MySql on ubuntu",
+        "type": "dev"
+      },
+      {
+        "children": [],
+        "nodeid": "76.78",
+        "selected": false,
+        "title": "Node.js",
+        "type": "sys"
+      },
+      {
+        "children": [],
+        "nodeid": "76.15",
+        "selected": false,
+        "title": "ufw firewall",
+        "type": "dev"
+      }
+    ],
+    "closed": false,
+    "nodeid": "76",
+    "selected": false,
+    "title": "Ubuntu",
+    "type": "sys"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "nodeid": "19.20",
+        "selected": false,
+        "title": "New install",
+        "type": "sys"
+      },
+      {
+        "children": [],
+        "nodeid": "19.31",
+        "selected": false,
+        "title": "Keyboard",
+        "type": "sys"
+      }
+    ],
+    "closed": false,
+    "nodeid": "19",
+    "selected": false,
+    "title": "Mac",
+    "type": "sys"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "nodeid": "10.36",
+        "selected": false,
+        "title": "Work targets",
+        "type": "home"
+      },
+      {
+        "children": [],
+        "nodeid": "10.11",
+        "selected": false,
+        "title": "Pending returns",
+        "type": "home"
+      },
+      {
+        "children": [],
+        "nodeid": "10.18",
+        "selected": false,
+        "title": "Projects and todo",
+        "type": "home"
+      }
+    ],
+    "closed": false,
+    "nodeid": "10",
+    "selected": false,
+    "title": "Matadham",
+    "type": "home"
+  },
+  {
+    "children": [
+      {
+        "children": [],
+        "nodeid": "26.38",
+        "selected": true,
+        "title": "Geeta reinstall",
+        "type": "sys"
+      },
+      {
+        "children": [],
+        "nodeid": "26.27",
+        "selected": false,
+        "title": "Setup",
+        "type": "sys"
+      }
+    ],
+    "closed": false,
+    "nodeid": "26",
+    "selected": false,
+    "title": "Windows 8.1",
+    "type": "sys"
+  }
+]
