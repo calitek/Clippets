@@ -10,7 +10,7 @@ import snipData from './snip.Reducer';
 const reducer = combineReducers({treeData, snipData});
 let middleware = [thunkMiddleware];
 
-const api = 2; //run in node-1 run in electron-2
+const api = 1; //run in node-1 run in electron-2
 if (api === 1) middleware.push(wsMiddleware);
 else middleware.push(ipcMiddleware);
 

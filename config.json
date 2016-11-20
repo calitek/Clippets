@@ -2,6 +2,9 @@
   "darwin": {
     "dataRoot": "/Users/janaka/Kykas/Projects/Clippets/data/"
   },
+  "darwinApp": {
+    "dataRoot": "/Users/janaka/Kykas/ClippetsData/"
+  },
   "linux": {
     "dataRoot": "/var/www/Clippets/data/"
   },
