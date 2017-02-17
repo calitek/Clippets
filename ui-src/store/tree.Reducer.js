@@ -18,7 +18,7 @@ function _getSelected(tree) {
   let result = null;
   lodash.each(tree, function(node) {
     if (node.selected) result = node;
-    if(result == null && node.children.length > 0) result = _getSelected(node.children);
+    if(result == null && node.children && node.children.length > 0) result = _getSelected(node.children);
   });
   return result;
 }
@@ -180,7 +180,7 @@ export default function handleActions(state = initialTreeState, action) {
   let treeCopy = state.treeData.slice(0);
   let currentCopy = Object.assign({}, state.currentTreeNode);
   switch (action.type) {
-    case 'ApiGotTreeData': {
+    case 'ApiGetTreeDataDone': {
       let gotTreeData = _gotTreeView(action.data);
       return {...state, ...gotTreeData};
     }

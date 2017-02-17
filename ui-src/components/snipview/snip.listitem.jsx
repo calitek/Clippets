@@ -21,9 +21,9 @@ const SnipButtonSty = {
   border: '0px',
   cursor: 'pointer',
   height: '1.8em',
-  right: '42px',
+  right: '58px',
   position: 'absolute',
-  width: 'calc(70% - 114px)',
+  width: 'calc(70% - 100px)',
   zIndex: '2'
 };
 

@@ -1,9 +1,9 @@
 
 export function apiSetTreeData(data) { return {type: 'ApiSetTreeData', data}; }
 
-export function apiGotTreeData(data) {
+export function apiGetTreeDataDone(data) {
   return (dispatch, getState) => {
-    dispatch({type: 'ApiGotTreeData', data});
+    dispatch({type: 'ApiGetTreeDataDone', data});
     dispatch({type: 'SelectTreeNode', node: getState().treeData.currentTreeNode});
     dispatch({type: 'SetNextNodeID', nodeID: getState().snipData.nextNodeID});
   };
@@ -13,9 +13,9 @@ export function apiGetSnipData(data) { return {type: 'ApiGetSnipData', data}; }
 
 export function apiSetSnipData(data) { return {type: 'ApiSetSnipData', data}; }
 
-export function apiGotSnipData(data) {
+export function apiGetSnipDataDone(data) {
   return (dispatch) => {
-    dispatch({type: 'ApiGotSnipData', data});
+    dispatch({type: 'ApiGetSnipDataDone', data});
     dispatch({type: 'ApiGetTreeData'});
   };
 }
@@ -29,4 +29,4 @@ export function apiGetClipboard(position) {
 
 export function apiSetClipboard(clip) { return {type: 'ApiSetClipboard', clip}; }
 
-export function apiGotClipboard(clip) { return {type: 'ApiGotClipboard', clip, position: getClipboardPosition}; }
+export function apiGetClipboardDone(clip) { return {type: 'ApiGetClipboardDone', clip, position: getClipboardPosition}; }

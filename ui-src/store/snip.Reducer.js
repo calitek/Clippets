@@ -95,8 +95,8 @@ const initialSnipState = {
 export default function handleActions(state = initialSnipState, action) {
   let _snipData = Object.assign({}, state);
   switch (action.type) {
-    case 'ApiGotSnipData': return _gotSnipData(action.data, _snipData);
-    case 'ApiGotClipboard': return _newSnip(action.position, action.clip, _snipData);
+    case 'ApiGetSnipDataDone': return _gotSnipData(action.data, _snipData);
+    case 'ApiGetClipboardDone': return _newSnip(action.position, action.clip, _snipData);
     case 'NewSnipAfter':
     case 'NewSnipBefore': return _newSnip(action.type, '', _snipData);
     case 'MoveSnipUp':

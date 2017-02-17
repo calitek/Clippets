@@ -3,7 +3,7 @@ import React from 'react';
 import JInput from '../common/jInput';
 
 const treeDetailSty = {margin: '10px 10px'};
-const inputTextSty = {color: 'black', margin: '0 5px', width: '100%'};
+const inputTextSty = {color: 'black', margin: '0 5px', width: '90%'};
 
 const titleInput = {name: 'title', type: 'text', style: inputTextSty, focus: true};
 

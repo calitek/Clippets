@@ -8,7 +8,7 @@ export function ipcMiddleware(store) {
         case 'ApiSetTreeData': ipc.send('client:SetTreeData', action.data); break;
         case 'ApiGetSnipData': ipc.send('client:GetSnipData', action.data); break;
         case 'ApiSetSnipData': ipc.send('client:SetSnipData', action.data); break;
-        case 'ApiGetClipboard': store.dispatch(Actions.apiGotClipboard(clipboard.readText())); break;
+        case 'ApiGetClipboard': store.dispatch(Actions.apiGetClipboardDone(clipboard.readText())); break;
         case 'ApiSetClipboard': clipboard.writeText(action.clip); break;
       }
     }
@@ -17,12 +17,12 @@ export function ipcMiddleware(store) {
 }
 
 export function startIpc(store) {
-  ipc.on('server:GotTreeData', (event, data) => {
-    store.dispatch(Actions.apiGotTreeData(data));
+  ipc.on('server:GetTreeDataDone', (event, data) => {
+    store.dispatch(Actions.apiGetTreeDataDone(data));
   });
 
-  ipc.on('server:GotSnipData', (event, data) => {
-    store.dispatch(Actions.apiGotSnipData(data));
+  ipc.on('server:GetSnipDataDone', (event, data) => {
+    store.dispatch(Actions.apiGetSnipDataDone(data));
   });
 
   store.dispatch(Actions.apiGetSnipData());

@@ -1,21 +1,18 @@
 'use strict';
 
 const express = require('express');
+const app = express();
+const server = require('http').Server(app);
+const ioServer = require('socket.io')(server);
 const favicon = require('serve-favicon');
 
 const path = require('path');
-const Primus = require('primus');
-const Emitter = require('primus-emitter');
-const socketCallBack = function(socket){ require('./mainsocket')(socket); };
 const port = Number(process.env.CLIPPETSPORT || 3300);
 
-const app = express();
+server.listen(port);
 
-const server = app.listen(port);
-const sio = new Primus(server, {transformer: 'websockets', parser: 'JSON'});
-sio.use('emitter', Emitter);
-
-sio.on('connection', socketCallBack);
+const socketCallBack = function(socket){ require('./mainsocket')(socket); };
+ioServer.on('connection', socketCallBack);
 
 app.use('/', express.static('ui-dist'));
 app.use(favicon(path.join(__dirname, '..', 'ui-dist', 'img', 'favicon.ico')));

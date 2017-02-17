@@ -1,6 +1,6 @@
 [
   {
-    "nextid": 83,
+    "nextid": 93,
     "nodeid": "001"
   },
   {
@@ -71,6 +71,10 @@
       {
         "comment": "",
         "snip": ".TreeButtonImg {\n\tpadding: 0px;\n\tvertical-align: top;\n}"
+      },
+      {
+        "comment": "hex color opacity",
+        "snip": "100% — FF\n95% — F2\n90% — E6\n85% — D9\n80% — CC\n75% — BF\n70% — B3\n65% — A6\n60% — 99\n55% — 8C\n50% — 80\n45% — 73\n40% — 66\n35% — 59\n30% — 4D\n25% — 40\n20% — 33\n15% — 26\n10% — 1A\n5% — 0D\n0% — 00"
       }
     ]
   },
@@ -96,7 +100,51 @@
     "snips": [
       {
         "comment": "",
+        "snip": "16-05933-MM7"
+      },
+      {
+        "comment": "",
+        "snip": "California"
+      },
+      {
+        "comment": "",
+        "snip": "Southern"
+      },
+      {
+        "comment": "",
+        "snip": "Geeta Christina Stevens"
+      },
+      {
+        "comment": "",
+        "snip": "Janaka Mark Stevens"
+      },
+      {
+        "comment": "",
+        "snip": "Janaka Mark Stevens\n30509 Alta Mesa Dr.\nValley Center, CA  92082\n760-715-7234"
+      },
+      {
+        "comment": "",
+        "snip": "30509 alta mesa dr., valley center, ca, 92082"
+      },
+      {
+        "comment": "",
+        "snip": "30509 Alta Mesa Dr\nValley Center CA  92082"
+      },
+      {
+        "comment": "",
+        "snip": "Residence located at;\n"
+      },
+      {
+        "comment": "Court clerk",
+        "snip": "619-557-5620"
+      },
+      {
+        "comment": "",
         "snip": "UPDATE AgLibraryKeyword SET includeParents = 0 WHERE includeParents = 1"
+      },
+      {
+        "comment": "",
+        "snip": "CSD 1099\n106Sum\n106A/B - J\n106Dec\n107\n108\n122A-1\nSupporting Documentation Cover Sheet and applicable documents\n"
       }
     ]
   },
@@ -342,13 +390,26 @@
       },
       {
         "comment": "",
-        "snip": "sudo npm install -g gulp node-gyp nodemon"
+        "snip": "sudo npm install -g gulp node-gyp nodemon eslint babel-eslint eslint-plugin-babel eslint-plugin-react "
       }
     ]
   },
   {
     "nodeid": "22",
-    "snips": []
+    "snips": [
+      {
+        "snip": "npm run ww",
+        "comment": ""
+      },
+      {
+        "snip": "npm run nw",
+        "comment": ""
+      },
+      {
+        "snip": "npm start",
+        "comment": ""
+      }
+    ]
   },
   {
     "nodeid": "22.23",
@@ -464,59 +525,59 @@
     "snips": [
       {
         "comment": "",
-        "snip": "ssh port 22"
+        "snip": "after ssh to port 22"
       },
       {
         "comment": "",
-        "snip": "sudo apt-get update\n"
+        "snip": "apt-get update\n"
       },
       {
         "comment": "",
-        "snip": "sudo apt-get install npm\n"
+        "snip": "apt-get upgrade"
       },
       {
         "comment": "",
-        "snip": "sudo apt-get install git\n"
+        "snip": "apt-get install npm\n"
       },
       {
         "comment": "",
-        "snip": "sudo apt-get install ufw\n"
+        "snip": "apt-get install git\n"
       },
       {
         "comment": "",
-        "snip": "sudo apt-get install Nginx\n"
+        "snip": "apt-get install ufw\n"
       },
       {
         "comment": "",
-        "snip": "sudo apt-get install nano"
+        "snip": "apt-get install nginx\n"
       },
       {
         "comment": "",
-        "snip": "sudo apt-get install build-essential libssl-dev"
+        "snip": "apt-get install nano"
       },
       {
         "comment": "",
-        "snip": "curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | sh"
+        "snip": "apt-get install build-essential libssl-dev\n"
       },
       {
         "comment": "",
-        "snip": "curl https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash"
+        "snip": "curl https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash\n"
       },
       {
         "comment": "",
-        "snip": "nvm ls-remote"
+        "snip": "nvm ls-remote\n"
       },
       {
         "comment": "",
-        "snip": "nvm install stable"
+        "snip": "nvm install node\n"
       },
       {
         "comment": "",
-        "snip": "nvm alias default 5.12.0"
+        "snip": "nvm install --lts=argon\n"
       },
       {
         "comment": "",
-        "snip": "sudo n=$(v5.10.1);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local"
+        "snip": "nvm alias default 6.9.0\n"
       },
       {
         "comment": "",
@@ -544,23 +605,19 @@
       },
       {
         "comment": "",
-        "snip": "sudo npm install -g forever"
+        "snip": "npm install -g pm2\n"
       },
       {
         "comment": "",
-        "snip": "sudo npm install -g node-gyp"
+        "snip": "npm install -g node-gyp\n"
       },
       {
         "comment": "",
-        "snip": "cd /var\n"
+        "snip": "mkdir /var/www\n"
       },
       {
         "comment": "",
-        "snip": "sudo mkdir www\n"
-      },
-      {
-        "comment": "",
-        "snip": "cd www\n"
+        "snip": "cd /var/www\n"
       }
     ]
   },
@@ -698,12 +755,7 @@
   },
   {
     "nodeid": "26.38",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "this is empty"
-      }
-    ]
+    "snips": []
   },
   {
     "nodeid": "27",
@@ -754,39 +806,6 @@
       {
         "comment": "",
         "snip": "update AgLibraryKeyword set includeParents = 0"
-      }
-    ]
-  },
-  {
-    "nodeid": "22.32.47",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.12/Basic"
-      },
-      {
-        "comment": "",
-        "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.12/ReFluxWebSocket"
-      },
-      {
-        "comment": "",
-        "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.13/Basic"
-      },
-      {
-        "comment": "",
-        "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.13/ReFluxWebSocket"
-      },
-      {
-        "comment": "",
-        "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.14/Basic"
-      },
-      {
-        "comment": "",
-        "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.14/ReFluxSuperAgent"
-      },
-      {
-        "comment": "",
-        "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.14/ThirdParty/GoogleMaps"
       }
     ]
   },
@@ -925,10 +944,6 @@
       },
       {
         "comment": "",
-        "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.15/BasicJestTest"
-      },
-      {
-        "comment": "",
         "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.15/BasicUnitTest"
       },
       {
@@ -946,6 +961,10 @@
       {
         "comment": "",
         "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.15/ReduxWebSocket"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.15/ReduxSocketIO"
       },
       {
         "comment": "",
@@ -998,6 +1017,10 @@
       {
         "comment": "",
         "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.15.Common/RangeSlider"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactPatterns/React.15.Common/Select"
       },
       {
         "comment": "",
@@ -1119,7 +1142,7 @@
     "snips": [
       {
         "comment": "",
-        "snip": "104.236.132.167"
+        "snip": "138.68.55.247"
       }
     ]
   },
@@ -1231,31 +1254,7 @@
     "snips": [
       {
         "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/basicid.palminfo.org"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name basicid.palminfo.org;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5100;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.basicid.palminfo.org;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5100;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/basicid.palminfo.org /etc/nginx/sites-enabled/basicid.palminfo.org"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/BasicID"
+        "snip": "cd /var/www/BasicID\n"
       },
       {
         "comment": "",
@@ -1268,31 +1267,7 @@
     "snips": [
       {
         "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/clippets.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name clippets.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5200;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.clippets.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5200;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/clippets.calitek.com /etc/nginx/sites-enabled/clippets.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/Clippets"
+        "snip": "cd /var/www/Clippets\n"
       },
       {
         "comment": "",
@@ -1305,35 +1280,15 @@
     "snips": [
       {
         "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/codeviewer.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name codeviewer.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5300;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.codeviewer.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5300;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/codeviewer.calitek.com /etc/nginx/sites-enabled/codeviewer.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/CodeView/CodeViewer"
+        "snip": "cd /var/www/CodeViewer\n"
       },
       {
         "comment": "",
         "snip": "export CODEVIEWERPORT=5300"
+      },
+      {
+        "comment": "",
+        "snip": "test.codeviewer.calitek.com"
       }
     ]
   },
@@ -1342,39 +1297,7 @@
     "snips": [
       {
         "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/www.palminfo.org"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/test.palminfo.org"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name www.palminfo.org palminfo.org;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5400;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.palminfo.org;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5400;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/www.palminfo.org /etc/nginx/sites-enabled/www.palminfo.org"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/test.palminfo.org /etc/nginx/sites-enabled/test.palminfo.org"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/PalmInfo"
+        "snip": "cd /var/www/PalmInfo\n"
       },
       {
         "comment": "",
@@ -1383,430 +1306,31 @@
     ]
   },
   {
-    "nodeid": "53.59.64",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/basic.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name basic.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5500;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.basic.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5500;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/basic.calitek.com /etc/nginx/sites-enabled/basic.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15/Basic"
-      },
-      {
-        "comment": "",
-        "snip": "export BASICPORT=5500"
-      }
-    ]
-  },
-  {
-    "nodeid": "53.59.65",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/refluxsa.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name refluxsa.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5600;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.refluxsa.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5600;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/refluxsa.calitek.com /etc/nginx/sites-enabled/refluxsa.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15/ReFluxSuperAgent"
-      },
-      {
-        "comment": "",
-        "snip": "export REFLUXSAPORT=5600"
-      }
-    ]
-  },
-  {
-    "nodeid": "53.59.66",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/buttons.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name buttons.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5700;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.buttons.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5700;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/buttons.calitek.com /etc/nginx/sites-enabled/buttons.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15.Common/Buttons"
-      },
-      {
-        "comment": "",
-        "snip": "export BUTTONPORT=5700"
-      }
-    ]
-  },
-  {
-    "nodeid": "53.59.67",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/dropdown.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name dropdown.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5800;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.dropdown.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5800;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/dropdown.calitek.com /etc/nginx/sites-enabled/dropdown.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15.Common/DropDown"
-      },
-      {
-        "comment": "",
-        "snip": "export DROPDOWNPORT=5800"
-      }
-    ]
-  },
-  {
-    "nodeid": "53.59.68",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/forminputs.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name forminputs.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5900;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.forminputs.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5900;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/forminputs.calitek.com /etc/nginx/sites-enabled/forminputs.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15.Common/FormInputs"
-      },
-      {
-        "comment": "",
-        "snip": "export FORMINPUTPORT=5900"
-      }
-    ]
-  },
-  {
-    "nodeid": "53.59.69",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/gallery.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name gallery.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6000;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.gallery.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6000;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/gallery.calitek.com /etc/nginx/sites-enabled/gallery.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15.Common/Gallery"
-      },
-      {
-        "comment": "",
-        "snip": "export GALLERYPORT=6000"
-      }
-    ]
-  },
-  {
-    "nodeid": "53.59.70",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/list.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name list.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6100;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.list.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6100;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/list.calitek.com /etc/nginx/sites-enabled/list.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15.Common/List"
-      },
-      {
-        "comment": "",
-        "snip": "export LISTPORT=6100"
-      }
-    ]
-  },
-  {
-    "nodeid": "53.59.71",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/progressbar.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name progressbar.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6200;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.progressbar.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6200;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/progressbar.calitek.com /etc/nginx/sites-enabled/progressbar.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15.Common/ProgressBar"
-      },
-      {
-        "comment": "",
-        "snip": "export PROGRESSBARPORT=6200"
-      }
-    ]
-  },
-  {
-    "nodeid": "53.59.72",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/rangeslider.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name rangeslider.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6300;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.rangeslider.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6300;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/rangeslider.calitek.com /etc/nginx/sites-enabled/rangeslider.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15.Common/RangeSlider"
-      },
-      {
-        "comment": "",
-        "snip": "export RANGESLIDERPORT=6300"
-      }
-    ]
-  },
-  {
-    "nodeid": "53.59.73",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/tooltip.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name tooltip.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6400;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.tooltip.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6400;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/tooltip.calitek.com /etc/nginx/sites-enabled/tooltip.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15.Common/Tooltip"
-      },
-      {
-        "comment": "",
-        "snip": "export TOOLTIPPORT=6400"
-      }
-    ]
-  },
-  {
-    "nodeid": "53.59.74",
-    "snips": [
-      {
-        "comment": "",
-        "snip": "Initial Setup"
-      },
-      {
-        "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/treeview.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name treeview.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6500;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "server {\n  server_name test.treeview.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6500;\n  }\n}\n"
-      },
-      {
-        "comment": "",
-        "snip": "sudo ln -s /etc/nginx/sites-available/treeview.calitek.com /etc/nginx/sites-enabled/treeview.calitek.com"
-      },
-      {
-        "comment": "",
-        "snip": "Start - Restart"
-      },
-      {
-        "comment": "",
-        "snip": "cd /var/www/ReactPatterns/React.15.Common/TreeView"
-      },
-      {
-        "comment": "",
-        "snip": "export TREEVIEWPORT=6500"
-      }
-    ]
-  },
-  {
     "nodeid": "53.59.75",
     "snips": [
       {
-        "comment": "",
+        "comment": "restart",
         "snip": "sudo shutdown -r now"
       },
       {
         "comment": "",
-        "snip": "sudo nano /etc/nginx/sites-available/multi.calitek.com"
+        "snip": "ls  /etc/nginx/sites-available"
       },
       {
         "comment": "",
-        "snip": "server {\n  server_name test.basicid.palminfo.org;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5100;\n  }\n}\nserver {\n  server_name test.clippets.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5200;\n  }\n}\nserver {\n  server_name test.codeviewer.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5300;\n  }\n}\nserver {\n  server_name test.palminfo.org;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5400;\n  }\n}\nserver {\n  server_name test.basic.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5500;\n  }\n}\nserver {\n  server_name test.refluxsa.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5600;\n  }\n}\nserver {\n  server_name test.buttons.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5700;\n  }\n}\nserver {\n  server_name test.dropdown.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5800;\n  }\n}\nserver {\n  server_name test.forminputs.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:5900;\n  }\n}\nserver {\n  server_name test.gallery.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6000;\n  }\n}\nserver {\n  server_name test.list.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6100;\n  }\n}\nserver {\n  server_name test.progressbar.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6200;\n  }\n}\nserver {\n  server_name test.rangeslider.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6300;\n  }\n}\nserver {\n  server_name test.tooltip.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6400;\n  }\n}\nserver {\n  server_name test.treeview.calitek.com;\n  location / {\n      proxy_set_header Upgrade $http_upgrade;\n      proxy_set_header Connection \"upgrade\";\n      proxy_http_version 1.1;\n      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;\n      proxy_set_header Host $host;\n      proxy_pass http://localhost:6500;\n  }\n}\n"
+        "snip": "rm -f  /etc/nginx/sites-available/default"
       },
       {
         "comment": "",
-        "snip": "sudo service nginx restart"
+        "snip": "nano /etc/nginx/sites-available/multi.calitek.com"
+      },
+      {
+        "comment": "",
+        "snip": "ln -s /etc/nginx/sites-available/multi.calitek.com /etc/nginx/sites-enabled/multi.calitek.com"
+      },
+      {
+        "comment": "",
+        "snip": "service nginx restart\n"
       },
       {
         "comment": "",
@@ -1818,21 +1342,50 @@
       },
       {
         "comment": "",
-        "snip": "pm2 start pm02.json"
-      },
-      {
-        "comment": "",
         "snip": "pm2 restart js/server.js"
       },
       {
         "comment": "",
-        "snip": "pm2 restart pm02.json"
+        "snip": "pm2 start pm2List.json"
+      },
+      {
+        "comment": "",
+        "snip": "pm2 stop pm2List.json"
+      },
+      {
+        "comment": "",
+        "snip": "pm2 restart pm2List.json"
+      },
+      {
+        "comment": "",
+        "snip": "pm2 list"
       }
     ]
   },
   {
     "nodeid": "76",
-    "snips": []
+    "snips": [
+      {
+        "comment": "Authorize login as root",
+        "snip": "nano /etc/ssh/sshd_config"
+      },
+      {
+        "comment": "",
+        "snip": " PermitRootLogin yes "
+      },
+      {
+        "comment": "",
+        "snip": "sudo shutdown -r now"
+      },
+      {
+        "comment": "full shutdown, only for test server",
+        "snip": "shutdown -h now\n"
+      },
+      {
+        "comment": "get version",
+        "snip": "lsb_release -a"
+      }
+    ]
   },
   {
     "nodeid": "76.77",
@@ -1946,6 +1499,227 @@
       {
         "comment": "",
         "snip": "cd /Users/janaka/Kykas/Projects/NodejsPatterns/DataAccess/SqlServer"
+      }
+    ]
+  },
+  {
+    "nodeid": "10.82",
+    "snips": [
+      {
+        "comment": "let sit 15 minutes",
+        "snip": "Guton free crapes\n\n1 cup brown rice\n1 cup white rice\n1/2 cup tapioca\n1/2 tbsp baking powder\n1/2 tbsp vanilla\n4 eggs\n2 1/2 tbsp butter\n2 salad spoons almond meal\n1 tbsp cream\n1 1/2 water\n"
+      },
+      {
+        "comment": "",
+        "snip": "Corn bread\n\n1 cup corn meal\n.5 cup polenta\n.5 cup garbonzo flour\n1.5 tsp baking powder\n.5 tsp salt\n2-3 tbsp sugar\n\n3 eggs\n1.5 cup milk\n3 tbsp butter\n\ncook at 400 for 35 minutes"
+      }
+    ]
+  },
+  {
+    "nodeid": "76.83",
+    "snips": [
+      {
+        "comment": "",
+        "snip": "***use sudo if not root"
+      },
+      {
+        "comment": "",
+        "snip": "nano /etc/ssh/sshd_config"
+      },
+      {
+        "comment": "",
+        "snip": "Match group plantsigns\n    ChrootDirectory /var/www/Plantsigns\n    X11Forwarding no\n    AllowTcpForwarding no\n    ForceCommand internal-sftp"
+      },
+      {
+        "comment": "",
+        "snip": "sudo /etc/init.d/ssh restart"
+      },
+      {
+        "comment": "",
+        "snip": "sudo addgroup plantsigns"
+      },
+      {
+        "comment": "",
+        "snip": "sudo adduser gwood"
+      },
+      {
+        "comment": "gwood psword",
+        "snip": "iwfPo3XKdCg1WxEJeibG"
+      },
+      {
+        "comment": "",
+        "snip": "sudo usermod -G plantsigns gwood"
+      },
+      {
+        "comment": "",
+        "snip": "sudo chown root:root /var/www/Plantsigns"
+      },
+      {
+        "comment": "",
+        "snip": "sudo chown gwood:plantsigns /var/www/Plantsigns/ui-dist"
+      },
+      {
+        "comment": "",
+        "snip": "find /var/www/Plantsigns/ui-dist -type d -exec chmod 775 {} +"
+      },
+      {
+        "comment": "",
+        "snip": "find /var/www/Plantsigns/ui-dist -type f -exec chmod 664 {} +"
+      }
+    ]
+  },
+  {
+    "nodeid": "53.59.84",
+    "snips": [
+      {
+        "comment": "",
+        "snip": "cd /var/www/Calitek\n"
+      },
+      {
+        "comment": "",
+        "snip": "export CALITEKPORT=5000"
+      }
+    ]
+  },
+  {
+    "nodeid": "53.59.85",
+    "snips": [
+      {
+        "comment": "",
+        "snip": "cd /var/www/MastersDarshan\n"
+      },
+      {
+        "comment": "",
+        "snip": "export MASTERSDARSHANPORT=6700"
+      }
+    ]
+  },
+  {
+    "nodeid": "53.59.86",
+    "snips": [
+      {
+        "comment": "",
+        "snip": "cd /var/www/Plantsigns\n"
+      },
+      {
+        "comment": "",
+        "snip": "export PLANTSIGNSPORT=6600"
+      }
+    ]
+  },
+  {
+    "nodeid": "1.87",
+    "snips": [
+      {
+        "comment": "",
+        "snip": "ref={(ref) => { this.refName = ref; }}"
+      }
+    ]
+  },
+  {
+    "nodeid": "22.23.88",
+    "snips": [
+      {
+        "comment": "run after syncing pics from shared working. Then proof in word.",
+        "snip": "npm run captions"
+      },
+      {
+        "comment": "",
+        "snip": "npm run imagelist"
+      },
+      {
+        "comment": "",
+        "snip": "npm run palmlist"
+      },
+      {
+        "comment": "",
+        "snip": "npm run prepinfo"
+      },
+      {
+        "comment": "",
+        "snip": "npm run filtercount"
+      }
+    ]
+  },
+  {
+    "nodeid": "53.59.89",
+    "snips": []
+  },
+  {
+    "nodeid": "22.91",
+    "snips": []
+  },
+  {
+    "nodeid": "22.91.92",
+    "snips": [
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/Common/Buttons"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/Common/DropDown"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/Common/FormInputs"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/Common/Gallery"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/Common/ProgressBar"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/Common/RangeSlider"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/Common/Select"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/Common/TreeView"
+      }
+    ]
+  },
+  {
+    "nodeid": "22.91.93",
+    "snips": [
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/General/Basic"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/General/DragAndDrop"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/General/ListViewer"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/General/ReduxFetch"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/General/UsingNavigator"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/General/UsingNavigatorBar"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/General/WindowEvents"
+      },
+      {
+        "comment": "",
+        "snip": "cd /Users/janaka/Kykas/Projects/ReactNativePatterns/General/WindowObject"
       }
     ]
   }

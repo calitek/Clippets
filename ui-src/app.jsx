@@ -1,14 +1,14 @@
 'use strict';
 
-require('./index.html');
-require('./css/index.css');
-require('./img/Clippets1.ico');
-require('./img/favicon.ico');
-require('./img/fire.ico');
-require('./img/leaf.ico');
-require('./img/moon.ico');
-require('./img/snow.ico');
-require('./img/sun.ico');
+import './index.html';
+import './css/index.css';
+import './img/Clippets1.ico';
+import './img/favicon.ico';
+import './img/fire.ico';
+import './img/leaf.ico';
+import './img/moon.ico';
+import './img/snow.ico';
+import './img/sun.ico';
 
 import React from 'react';
 import ReactDom from 'react-dom';

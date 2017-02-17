@@ -6,21 +6,20 @@ import JButton from '../common/jButton';
 import {snipActions} from '../../store/snip.Actions';
 import {apiGetClipboard} from '../../store/api.Actions';
 
-const pasteSnipBtn = {buttonid: 'paste', text: 'Paste'};
+const pasteSnipBtn = {buttonid: 'paste', icon: 'fa fa-clipboard fa-2x', style: 'BtnImg'};
 const pasteBeforeBtn = {buttonid: 'pasteBefore', icon: 'fa fa-arrow-circle-o-up fa-2x', style: 'BtnImg'};
 const pasteAfterBtn = {buttonid: 'pasteAfter', icon: 'fa fa-arrow-circle-o-down fa-2x', style: 'BtnImg'};
 
-const newSnipBtn = {buttonid: 'new', text: 'New'};
+const newSnipBtn = {buttonid: 'new', icon: 'fa fa-file-text-o fa-2x', style: 'BtnImg', assignStyle: {color: '#419079'}};
 const newBeforeBtn = {buttonid: 'newBefore', icon: 'fa fa-arrow-circle-o-up fa-2x', style: 'BtnImg'};
 const newAfterBtn = {buttonid: 'newAfter', icon: 'fa fa-arrow-circle-o-down fa-2x', style: 'BtnImg'};
 
-const copySnipBtn = {buttonid: 'copy', text: 'Copy'};
+const copySnipBtn = {buttonid: 'copy', icon: 'fa fa-files-o fa-2x', style: 'BtnImg'};
 
-const moveSnipBtn = {buttonid: 'move', text: 'Move'};
 const moveSnipUpBtn = {buttonid: 'moveUp', icon: 'fa fa-arrow-circle-o-up fa-2x', style: 'BtnImg'};
 const moveSnipDownBtn = {buttonid: 'moveDown', icon: 'fa fa-arrow-circle-o-down fa-2x', style: 'BtnImg'};
 
-const removeSnipBtn = {buttonid: 'remove', text: 'Remove'};
+const removeSnipBtn = {buttonid: 'remove', icon: 'fa fa-trash-o fa-2x', style: 'BtnImg'};
 
 const ButtonAreaSty = {
   fontSize: '.9em',
@@ -45,28 +44,25 @@ class SnipsBtnsRender extends React.Component {
         <span id="fullBtnSpanSty" style={fullBtnSpanSty}>
           <JButton btn={copySnipBtn} parentClickHandler={this.clickHandler} />
         </span>
-        &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
 
         <span id="fullBtnSpanSty" style={fullBtnSpanSty}>
           <JButton btn={pasteSnipBtn} parentClickHandler={this.clickHandler} />
         </span>
         <JButton btn={pasteBeforeBtn} parentClickHandler={this.clickHandler} />
-        <JButton btn={pasteAfterBtn} parentClickHandler={this.clickHandler} selectedId={this.state.selectedId} />
-        &nbsp;&nbsp;
+        <JButton btn={pasteAfterBtn} parentClickHandler={this.clickHandler} />
+        &nbsp;&nbsp;&nbsp;&nbsp;
 
         <span id="fullBtnSpanSty" style={fullBtnSpanSty}>
           <JButton btn={newSnipBtn} parentClickHandler={this.clickHandler} />
         </span>
         <JButton btn={newBeforeBtn} parentClickHandler={this.clickHandler} />
-        <JButton btn={newAfterBtn} parentClickHandler={this.clickHandler} selectedId={this.state.selectedId} />
-        &nbsp;&nbsp;
+        <JButton btn={newAfterBtn} parentClickHandler={this.clickHandler} />
+        &nbsp;&nbsp;&nbsp;&nbsp;
 
-        <span id="fullBtnSpanSty" style={fullBtnSpanSty}>
-          <JButton btn={moveSnipBtn} parentClickHandler={this.clickHandler} />
-        </span>
         <JButton btn={moveSnipUpBtn} parentClickHandler={this.clickHandler} />
         <JButton btn={moveSnipDownBtn} parentClickHandler={this.clickHandler} />
-        &nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
         <span id="fullBtnSpanSty" style={fullBtnSpanSty}>
           <JButton btn={removeSnipBtn} parentClickHandler={this.clickHandler} />
@@ -77,7 +73,6 @@ class SnipsBtnsRender extends React.Component {
 }
 
 class SnipsBtns extends SnipsBtnsRender {
-  state = {selectedId: 'before'};
   clickHandler = (buttonid) => {
     switch (buttonid) {
       case 'paste':
