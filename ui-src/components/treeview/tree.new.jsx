@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 
 import TreeDetail from './tree.detail';
 import {saveTreeNew, treeActions} from '../../store/tree.Actions';
-import JButton from '../common/jButton';
+import {JButton} from 'jms-react-components';
 
 const newBeforeBtn = {buttonid: 'before', text: 'New Before', assignStyle: {width: '92px'}};
 const newAfterBtn = {buttonid: 'after', text: 'New After', assignStyle: {width: '92px'}};

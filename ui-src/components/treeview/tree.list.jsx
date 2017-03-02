@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import {selectTreeNode, setTreeNodeClosed} from '../../store/tree.Actions';
-import TreeView from './../common/jTreeView';
+import {JTreeView} from 'jms-react-components';
 
 class TreeList extends React.Component {
   iconHandler = (node) => { this.props.setTreeNodeClosed(node); };
@@ -15,7 +15,7 @@ class TreeList extends React.Component {
     };
     return (
       <div>
-        <TreeView
+        <JTreeView
           data={this.props.treeData}
           options={options}
           iconClick={this.iconHandler}

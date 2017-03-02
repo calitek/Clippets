@@ -32,14 +32,13 @@
   "dependencies": {
     "async": "latest",
     "express": "latest",
-    "safe-copy-paste": "latest",
+    "copy-paste": "latest",
     "serve-favicon": "latest",
     "socket.io": "latest"
   },
   "devDependencies": {
-    "electron-prebuilt": "*",
-    "gulp": "latest",
-    "gulp-shell": "latest",
+    "electron": "latest",
+    "jms-react-components": "file:/Users/janaka/Kykas/Projects/jms-react-components",
     "nodemon": "latest",
 
     "lodash": "latest",
@@ -47,6 +46,7 @@
     "react-dom": "^15.4.0",
     "react-redux": "latest",
     "redux": "latest",
+    "redux-logger": "latest",
     "redux-thunk": "latest",
     "traverse": "latest",
 

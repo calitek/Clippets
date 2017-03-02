@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 
 import {apiSetClipboard} from '../../store/api.Actions';
 import {selectSnipItem} from '../../store/snip.Actions';
-import JButton from '../common/jButton';
+import {JButton} from 'jms-react-components';
 
 const SelectSnipButtonSty = {
   backgroundColor: '#213919',

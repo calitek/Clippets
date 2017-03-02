@@ -5,6 +5,7 @@
     "react-dom",
     "react-redux",
     "redux",
+    "redux-logger",
     "redux-thunk",
     "traverse"
   ]

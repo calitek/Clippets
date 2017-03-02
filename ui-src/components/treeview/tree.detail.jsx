@@ -1,6 +1,6 @@
 import React from 'react';
 
-import JInput from '../common/jInput';
+import {JInput} from 'jms-react-components';
 
 const treeDetailSty = {margin: '10px 10px'};
 const inputTextSty = {color: 'black', margin: '0 5px', width: '90%'};

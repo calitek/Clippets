@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import JButton from '../common/jButton';
+import {JButton} from 'jms-react-components';
 import {snipActions} from '../../store/snip.Actions';
 import {apiGetClipboard} from '../../store/api.Actions';
 

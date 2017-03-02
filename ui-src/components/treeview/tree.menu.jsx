@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
 import {treeActions} from '../../store/tree.Actions';
-import JButton from '../common/jButton';
+import {JButton} from 'jms-react-components';
 
 const TreeMenuSty = {
   fontSize: '.9em',

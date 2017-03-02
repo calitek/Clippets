@@ -29,4 +29,9 @@ export function apiGetClipboard(position) {
 
 export function apiSetClipboard(clip) { return {type: 'ApiSetClipboard', clip}; }
 
-export function apiGetClipboardDone(clip) { return {type: 'ApiGetClipboardDone', clip, position: getClipboardPosition}; }
+export function apiGetClipboardDone(clip) {
+  return (dispatch, getState) => {
+    dispatch({type: 'ApiGetClipboardDone', clip, position: getClipboardPosition});
+    dispatch({type: 'ApiSetSnipData', data: {data: getState().snipData.allSnips}});
+  }
+}

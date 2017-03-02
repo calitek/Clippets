@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 
 import TreeDetail from './tree.detail';
 import {treeActions, saveTreeEdit} from '../../store/tree.Actions';
-import JButton from '../common/jButton';
+import {JButton} from 'jms-react-components';
 
 const saveEditBtn = {buttonid: 'save', text: 'Save'};
 const cancelEditBtn = {buttonid: 'cancel', text: 'Cancel'};
