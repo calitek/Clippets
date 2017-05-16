@@ -11,14 +11,24 @@ const radioInput1 = {name: 'radioGroup', type: 'radio', radioValue: 'dev'};
 const radioInput2 = {name: 'radioGroup', type: 'radio', radioValue: 'home'};
 const radioInput3 = {name: 'radioGroup', type: 'radio', radioValue: 'sys'};
 
-class TreeDetailRender extends React.Component {
-   render() {
+export default class TreeDetail extends React.Component {
+  state = {title: 'Hello!'};
+  componentWillReceiveProps = nextProps => {
+    if (this.state.title != nextProps.treeNode.title) this.setState({title: nextProps.treeNode.title});
+  };
+  handleTitleChange = (name, value) => {
+    this.props.handleChange(name, value);
+  };
+  handleValueChange = (name, value) => {
+    this.props.handleChange('type', value);
+  };
+  render() {
     titleInput.textValue = this.props.treeNode.title;
 
     let currentRadioGroupValue = this.props.treeNode.type;
-    radioInput1.radioChecked = (currentRadioGroupValue == radioInput1.radioValue);
-    radioInput2.radioChecked = (currentRadioGroupValue == radioInput2.radioValue);
-    radioInput3.radioChecked = (currentRadioGroupValue == radioInput3.radioValue);
+    radioInput1.radioChecked = currentRadioGroupValue == radioInput1.radioValue;
+    radioInput2.radioChecked = currentRadioGroupValue == radioInput2.radioValue;
+    radioInput3.radioChecked = currentRadioGroupValue == radioInput3.radioValue;
     return (
       <div id="treeDetail" style={treeDetailSty}>
         <JInput input={radioInput1} handleChange={this.handleValueChange} />&nbsp;Dev &nbsp;
@@ -29,13 +39,4 @@ class TreeDetailRender extends React.Component {
       </div>
     );
   }
-}
-
-export default class TreeDetail extends TreeDetailRender {
-  state = {title: 'Hello!'};
-  componentWillReceiveProps = (nextProps) => {
-    if (this.state.title != nextProps.treeNode.title) this.setState({title: nextProps.treeNode.title});
-  };
-  handleTitleChange = (name, value) => { this.props.handleChange(name, value); };
-  handleValueChange = (name, value) => { this.props.handleChange('type', value); };
 }

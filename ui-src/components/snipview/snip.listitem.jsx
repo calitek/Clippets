@@ -49,25 +49,23 @@ const SelectSnipDivSty = {
   width: '24px'
 };
 
-class SnipListItem extends React.Component {
-  snipClickHandler = (buttonid) => {
-    this.props.selectSnipItem(this.props.snippet);
-    if (buttonid == 'SnipBtn') this.props.apiSetClipboard(this.props.snippet.snip);
+const SnipListItem = props => {
+  const snipClickHandler = buttonid => {
+    props.selectSnipItem(props.snippet);
+    if (buttonid == 'SnipBtn') props.apiSetClipboard(props.snippet.snip);
   };
-  render() {
-    let SnipSpanSty = {width: 'calc(70% - 142px)'};
-    SnipSpanSty.color = (this.props.index === this.props.selectedKey) ? '#b58900' : '#afac87';
-    return (
-      <div id="SnipDivSty" onClick={this.snipClickHandler} className="FlexBox" style={SnipDivSty}>
-        <div id="SelectSnipDivSty" style={SelectSnipDivSty}>
-          <JButton btn={selectSnipBtn} parentClickHandler={this.snipClickHandler} />
-        </div>
-        <span id="SnipSpanSty" style={SnipSpanSty}>{this.props.snippet.snip}</span>
-        <JButton btn={SnipBtn} parentClickHandler={this.snipClickHandler} />
+  let SnipSpanSty = {width: 'calc(70% - 142px)'};
+  SnipSpanSty.color = props.index === props.selectedKey ? '#b58900' : '#afac87';
+  return (
+    <div id="SnipDivSty" onClick={snipClickHandler} className="FlexBox" style={SnipDivSty}>
+      <div id="SelectSnipDivSty" style={SelectSnipDivSty}>
+        <JButton btn={selectSnipBtn} parentClickHandler={snipClickHandler} />
       </div>
-    );
-  }
-}
+      <span id="SnipSpanSty" style={SnipSpanSty}>{props.snippet.snip}</span>
+      <JButton btn={SnipBtn} parentClickHandler={snipClickHandler} />
+    </div>
+  );
+};
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({selectSnipItem, apiSetClipboard}, dispatch);

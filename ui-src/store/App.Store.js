@@ -11,7 +11,7 @@ import snipData from './snip.Reducer';
 const reducer = combineReducers({treeData, snipData});
 let middleware = [thunkMiddleware];
 
-const node = 1; //run in node-1 run in electron-0
+const node = 0; //run in node-1 run in electron-0
 if (node) middleware.push(wsMiddleware);
 else middleware.push(ipcMiddleware);
 
@@ -23,5 +23,7 @@ const store = createStore(reducer, applyMiddleware(...middleware));
 
 if (node) startWs(store);
 else startIpc(store);
+
+store.dispatch({type: 'ApiGetSnipData'});
 
 export default store;

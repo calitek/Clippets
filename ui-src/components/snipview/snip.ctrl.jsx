@@ -9,18 +9,18 @@ import SnipsView from './snip.list';
 
 const SnipsCtrlRenderSty = {height: 'calc(100% - 2px)'};
 
-class SnipsCtrl extends React.Component {
-  copyHandler = () => { this.props.apiSetClipboard(this.props.currentSnip.snip); }
-  render() {
-    return (
-      <div id="SnipsCtrlRenderSty" style={SnipsCtrlRenderSty}>
-        <SnipsBtnsView copyHandler={this.copyHandler} />
-        <SnipsView data={this.props.currentSnips} selectedKey={this.props.currentSnipIndex} />
-        <SnipsDetail data={this.props.currentSnip} />
-      </div>
-    );
-  }
-}
+const SnipsCtrl = props => {
+  const copyHandler = () => {
+    props.apiSetClipboard(props.currentSnip.snip);
+  };
+  return (
+    <div id="SnipsCtrlRenderSty" style={SnipsCtrlRenderSty}>
+      <SnipsBtnsView copyHandler={copyHandler} />
+      <SnipsView data={props.currentSnips} selectedKey={props.currentSnipIndex} />
+      <SnipsDetail data={props.currentSnip} />
+    </div>
+  );
+};
 
 function mapStateToProps(store) {
   return {

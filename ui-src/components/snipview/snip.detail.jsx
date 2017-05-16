@@ -21,44 +21,33 @@ const CurrentSnipTextAreaSty = {
   width: 'calc(100% - 12px)'
 };
 
-class SnipsDetailRender extends React.Component {
-   render() {
+class SnipsDetail extends React.Component {
+  state = {snip: {snip: '', comment: ''}};
+  componentWillReceiveProps = nextProps => {
+    if (nextProps.data.snip != this.state.snip.snip || nextProps.data.comment != this.state.snip.comment)
+      this.setState({snip: nextProps.data});
+  };
+  handleSnipChange = ev => {
+    let newSnip = {snip: ev.target.value, comment: this.state.snip.comment};
+    this.setState({snip: newSnip});
+    this.props.saveSnipEdit(newSnip);
+  };
+  handleCommentChange = ev => {
+    let newSnip = {snip: this.state.snip.snip, comment: ev.target.value};
+    this.setState({snip: newSnip});
+    this.props.saveSnipEdit(newSnip);
+  };
+  render() {
     let snip = this.state.snip.snip;
     let comment = this.state.snip.comment;
 
     return (
       <div id="CurrentSnipDivSty" style={CurrentSnipDivSty}>
-        <textarea
-          value={snip}
-          onChange={this.handleSnipChange}
-          style={CurrentSnipTextAreaSty}
-        />
-        <textarea
-          value={comment}
-          onChange={this.handleCommentChange}
-          style={CurrentSnipTextAreaSty}
-        />
+        <textarea value={snip} onChange={this.handleSnipChange} style={CurrentSnipTextAreaSty} />
+        <textarea value={comment} onChange={this.handleCommentChange} style={CurrentSnipTextAreaSty} />
       </div>
     );
   }
-}
-
-class SnipsDetail extends SnipsDetailRender {
-  state = {snip: {snip: '', comment: ''}};
-  componentWillReceiveProps = (nextProps) => {
-    if ((nextProps.data.snip != this.state.snip.snip) || (nextProps.data.comment != this.state.snip.comment))
-     this.setState({snip: nextProps.data});
-  };
-  handleSnipChange = (ev) => {
-    let newSnip = {snip: ev.target.value, comment: this.state.snip.comment};
-    this.setState({snip: newSnip});
-    this.props.saveSnipEdit(newSnip);
-  };
-  handleCommentChange = (ev) => {
-    let newSnip = {snip: this.state.snip.snip, comment: ev.target.value};
-    this.setState({snip: newSnip});
-    this.props.saveSnipEdit(newSnip);
-  };
 }
 
 function mapDispatchToProps(dispatch) {

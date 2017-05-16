@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "electron": "latest",
-    "jms-react-components": "file:/Users/janaka/Kykas/Projects/jms-react-components",
+    "jms-react-components": "file:../../Patterns/jms-react-components",
     "nodemon": "latest",
 
     "lodash": "latest",

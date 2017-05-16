@@ -5,26 +5,23 @@ import {bindActionCreators} from 'redux';
 import {selectTreeNode, setTreeNodeClosed} from '../../store/tree.Actions';
 import {JTreeView} from 'jms-react-components';
 
-class TreeList extends React.Component {
-  iconHandler = (node) => { this.props.setTreeNodeClosed(node); };
-  clickHandler = (node) => { this.props.selectTreeNode(node); };
-  render() {
-    let options = {
-      icon: {sun: 'dev', leaf: 'home', snow: 'sys'},
-      typeName: ['node', 'type']
-    };
-    return (
-      <div>
-        <JTreeView
-          data={this.props.treeData}
-          options={options}
-          iconClick={this.iconHandler}
-          titleClick={this.clickHandler}
-        />
-      </div>
-    );
-  }
-}
+const TreeList = props => {
+  const iconHandler = node => {
+    props.setTreeNodeClosed(node);
+  };
+  const clickHandler = node => {
+    props.selectTreeNode(node);
+  };
+  let options = {
+    icon: {sun: 'dev', leaf: 'home', snow: 'sys'},
+    typeName: ['node', 'type']
+  };
+  return (
+    <div>
+      <JTreeView data={props.treeData} options={options} iconClick={iconHandler} titleClick={clickHandler} />
+    </div>
+  );
+};
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({selectTreeNode, setTreeNodeClosed}, dispatch);

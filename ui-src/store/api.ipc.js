@@ -24,6 +24,4 @@ export function startIpc(store) {
   ipc.on('server:GetSnipDataDone', (event, data) => {
     store.dispatch(Actions.apiGetSnipDataDone(data));
   });
-
-  store.dispatch(Actions.apiGetSnipData());
 }

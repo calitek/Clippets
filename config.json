@@ -3,7 +3,7 @@
     "dataRoot": "/Users/janaka/Kykas/Projects/Clippets/data/"
   },
   "darwin": {
-    "dataRoot": "/Users/janaka/Kykas/ClippetsData/"
+    "dataRoot": "/Dropbox/ClippetsData/"
   },
   "linux": {
     "dataRoot": "/var/www/Clippets/data/"

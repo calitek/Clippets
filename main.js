@@ -8,11 +8,18 @@ let config = require('./config.json');
 
 let configRoot;
 switch (process.platform) {
-  case 'darwin': configRoot = config.darwin; break;
-  case 'linux': configRoot = config.linux; break;
-  case 'win32': configRoot = config.win32; break;
+  case 'darwin':
+    configRoot = process.env.HOME + config.darwin.dataRoot;
+    break;
+  case 'linux':
+    configRoot = config.linux.dataRoot;
+    break;
+  case 'win32':
+    configRoot = process.env.USERPROFILE + config.win32.dataRoot;
+    break;
 }
-let rootDataPath = configRoot.dataRoot;
+
+let rootDataPath = configRoot;
 
 const {ipcMain} = electron;
 require('./js/mainipc.js')(ipcMain);
@@ -23,7 +30,9 @@ let mainWindowOptions = {
   title: 'Clippets'
 };
 
-app.on('window-all-closed', function() { app.quit(); });
+app.on('window-all-closed', function() {
+  app.quit();
+});
 
 app.on('ready', function() {
   mainWindow = new BrowserWindow(mainWindowOptions);
@@ -31,7 +40,7 @@ app.on('ready', function() {
   let windowStatePath = rootDataPath + 'windowstate.json';
   let windowState = {};
   if (false) mainWindow.openDevTools();
-  let jsonReadCallBack = function(err, data){
+  let jsonReadCallBack = function(err, data) {
     if (err) console.log('error opening windowstate');
     else {
       windowState = JSON.parse(data.toString());
@@ -45,7 +54,7 @@ app.on('ready', function() {
   mainWindow.on('close', function() {
     windowState.size = mainWindow.getSize();
     windowState.position = mainWindow.getPosition();
-    let writeFileCallBack = function (err) {
+    let writeFileCallBack = function(err) {
       if (err) console.log('error saving windowstate.json file ');
       mainWindow = null;
     };
