@@ -5,7 +5,7 @@ import SnipsCtrl from './snipview/snip.ctrl';
 
 const AppCtrlSty = {
   height: '100%',
-  padding: '0 10px 0 0'
+  padding: '0'
 };
 
 const TreeCtrlSty = {
@@ -20,7 +20,7 @@ const SnipsCtrlSty = {
   border: 'solid 1px darkslategrey',
   height: 'calc(100% - 10px)',
   overflow: 'hidden',
-  padding: '0 20px 0 5px',
+  padding: '0px',
   width: 'calc(70% - 35px)'
 };
 

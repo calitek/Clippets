@@ -6,13 +6,13 @@ import TreeMenu from './tree.menu';
 import TreeEdit from './tree.edit';
 import TreeNew from './tree.new';
 
-const TreeCtrlRenderSty = {height: 'calc(100% - 2px)'};
+const TreeCtrlRenderSty = {height: 'calc(100% - 10px)'};
 
 function TreeCtrl({treeData, currentTreeNode, showTreeEdit, showTreeNew}) {
   let hideTreeEdit = !showTreeEdit;
   let hideTreeNew = !showTreeNew;
   return (
-    <div id="TreeCtrlRenderSty" style={TreeCtrlRenderSty}>
+    <div id="TreeCtrlSty" style={TreeCtrlRenderSty}>
       <TreeMenu />
       <TreeList treeData={treeData} />
       <TreeEdit treeNode={currentTreeNode} hide={hideTreeEdit} />
