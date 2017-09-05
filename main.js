@@ -1,8 +1,6 @@
 'use strict';
 
-const electron = require('electron');
-const {app} = electron;
-const {BrowserWindow} = electron;
+const {app, BrowserWindow, ipcMain} = require('electron');
 let fs = require('fs');
 let config = require('./config.json');
 
@@ -21,7 +19,6 @@ switch (process.platform) {
 
 let rootDataPath = configRoot;
 
-const {ipcMain} = electron;
 require('./js/mainipc.js')(ipcMain);
 
 let mainWindow = null;

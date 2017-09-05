@@ -1,8 +1,8 @@
 {
-  "darwinApp": {
-    "dataRoot": "/Users/janaka/Kykas/Projects/Clippets/data/"
-  },
   "darwin": {
+    "dataRoot": "/Kykas/Projects/Clippets/data/"
+  },
+  "darwinApp": {
     "dataRoot": "/OneDrive/ClippetsData/"
   },
   "linux": {
