@@ -1,15 +1,16 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import {apiSetClipboard} from '../../store/api.Actions';
+import { apiSetClipboard } from '../../store/api.Actions';
 import SnipsBtnsView from './snip.buttons';
 import SnipsDetail from './snip.detail';
 import SnipsView from './snip.list';
 
-const SnipsCtrlRenderSty = {height: 'calc(100% - 2px)'};
+const SnipsCtrlRenderSty = { height: 'calc(100% - 2px)' };
 
-const SnipsCtrl = props => {
+const SnipsCtrl = (props) => {
   const copyHandler = () => {
     props.apiSetClipboard(props.currentSnip.snip);
   };
@@ -22,16 +23,23 @@ const SnipsCtrl = props => {
   );
 };
 
+SnipsCtrl.propTypes = {
+  apiSetClipboard: PropTypes.func,
+  currentSnips: PropTypes.array,
+  currentSnip: PropTypes.object,
+  currentSnipIndex: PropTypes.number,
+};
+
 function mapStateToProps(store) {
   return {
     currentSnips: store.snipData.currentSnips,
     currentSnip: store.snipData.currentSnip,
-    currentSnipIndex: store.snipData.currentSnipIndex
+    currentSnipIndex: store.snipData.currentSnipIndex,
   };
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({apiSetClipboard}, dispatch);
+  return bindActionCreators({ apiSetClipboard }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SnipsCtrl);

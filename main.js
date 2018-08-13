@@ -1,8 +1,6 @@
-'use strict';
-
-const {app, BrowserWindow, ipcMain} = require('electron');
-let fs = require('fs');
-let config = require('./config.json');
+const { app, BrowserWindow, ipcMain } = require('electron');
+const fs = require('fs');
+const config = require('./config.json');
 
 let configRoot;
 switch (process.platform) {
@@ -15,29 +13,32 @@ switch (process.platform) {
   case 'win32':
     configRoot = process.env.USERPROFILE + config.win32.dataRoot;
     break;
+  default: break;
 }
 
-let rootDataPath = configRoot;
+const rootDataPath = configRoot;
+console.info('rootDataPath:', rootDataPath);
 
 require('./js/mainipc.js')(ipcMain);
 
 let mainWindow = null;
-let mainWindowOptions = {
+const mainWindowOptions = {
   icon: './ui-dist/img/Clippets1.ico',
-  title: 'Clippets'
+  title: 'Clippets',
 };
 
-app.on('window-all-closed', function() {
+app.on('window-all-closed', () => {
   app.quit();
 });
 
-app.on('ready', function() {
+app.on('ready', () => {
   mainWindow = new BrowserWindow(mainWindowOptions);
 
-  let windowStatePath = rootDataPath + 'windowstate.json';
+  const windowStatePath = `${rootDataPath}windowstate.json`;
   let windowState = {};
-  if (false) mainWindow.openDevTools();
-  let jsonReadCallBack = function(err, data) {
+  const openDev = false;
+  if (openDev) mainWindow.openDevTools();
+  const jsonReadCallBack = (err, data) => {
     if (err) console.log('error opening windowstate');
     else {
       windowState = JSON.parse(data.toString());
@@ -47,11 +48,11 @@ app.on('ready', function() {
   };
   fs.readFile(windowStatePath, jsonReadCallBack);
 
-  mainWindow.loadURL('file://' + __dirname + '/ui-dist/index.html');
-  mainWindow.on('close', function() {
+  mainWindow.loadURL(`file://${__dirname}/ui-dist/index.html`);
+  mainWindow.on('close', () => {
     windowState.size = mainWindow.getSize();
     windowState.position = mainWindow.getPosition();
-    let writeFileCallBack = function(err) {
+    const writeFileCallBack = (err) => {
       if (err) console.log('error saving windowstate.json file ');
       mainWindow = null;
     };

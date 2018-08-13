@@ -1,17 +1,30 @@
 import * as Actions from './api.Actions';
 
-var socket = null;
+let socket = null;
 
 export function wsMiddleware() {
-  return (next) => (action) => {
+  return next => (action) => {
     if (socket) {
       switch (action.type) {
-        case 'ApiGetTreeData': socket.emit('client:GetTreeData', {}); break;
-        case 'ApiSetTreeData': socket.emit('client:SetTreeData', action.data); break;
-        case 'ApiGetSnipData': socket.emit('client:GetSnipData', {}); break;
-        case 'ApiSetSnipData': socket.emit('client:SetSnipData', action.data); break;
-        case 'ApiGetClipboard': socket.emit('client:GetClipboard', {}); break;
-        case 'ApiSetClipboard': socket.emit('client:SetClipboard', action.clip); break;
+        case 'ApiGetTreeData':
+          socket.emit('client:GetTreeData', {});
+          break;
+        case 'ApiSetTreeData':
+          socket.emit('client:SetTreeData', action.data);
+          break;
+        case 'ApiGetSnipData':
+          socket.emit('client:GetSnipData', {});
+          break;
+        case 'ApiSetSnipData':
+          socket.emit('client:SetSnipData', action.data);
+          break;
+        case 'ApiGetClipboard':
+          socket.emit('client:GetClipboard', {});
+          break;
+        case 'ApiSetClipboard':
+          socket.emit('client:SetClipboard', action.clip);
+          break;
+        default: break;
       }
     }
     return next(action);

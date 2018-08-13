@@ -10,39 +10,39 @@ function getSetNextNodeID() {
 
 function _gotTreeView(treedata) {
   let _currentTreeNode = _getSelected(treedata);
-  if (_currentTreeNode == null) _currentTreeNode = treedata[0];
-  return {treeData: treedata, currentTreeNode: _currentTreeNode};
+  if (_currentTreeNode == null) [_currentTreeNode] = treedata;
+  return { treeData: treedata, currentTreeNode: _currentTreeNode };
 }
 
 function _getSelected(tree) {
   let result = null;
-  lodash.each(tree, function(node) {
+  lodash.each(tree, (node) => {
     if (node.selected) result = node;
-    if(result == null && node.children && node.children.length > 0) result = _getSelected(node.children);
+    if (result == null && node.children && node.children.length > 0) result = _getSelected(node.children);
   });
   return result;
 }
 
 function _saveTreeNew(_treeData, treeNode, _currentTreeNode, location) {
-  let newNode = treeNode;
-  let nodeIndex = _getNodeIndex(_treeData, _currentTreeNode);
+  const newNode = treeNode;
+  const nodeIndex = _getNodeIndex(_treeData, _currentTreeNode);
 
-  let nextNodeID = getSetNextNodeID();
+  const nextNodeID = getSetNextNodeID();
   let newNodeID;
-  if (location == 'child') {
-    newNodeID = _currentTreeNode.nodeid + '.' + nextNodeID;
+  if (location === 'child') {
+    newNodeID = `${_currentTreeNode.nodeid}.${nextNodeID}`;
   } else {
-    let nodeIdArray = _currentTreeNode.nodeid.split('.');
+    const nodeIdArray = _currentTreeNode.nodeid.split('.');
     nodeIdArray.pop();
-    newNodeID = nodeIdArray.join('.') + '.' + nextNodeID;
+    newNodeID = `${nodeIdArray.join('.')}.${nextNodeID}`;
   }
   newNode.nodeid = newNodeID;
 
   let tIndex;
   let children;
-  let isNotRoot = (nodeIndex.length > 1);
-  if (location == 'child') {
-    let nodeIndex2 = _getNodeIndex(_treeData, _currentTreeNode);
+  let isNotRoot = nodeIndex.length > 1;
+  if (location === 'child') {
+    const nodeIndex2 = _getNodeIndex(_treeData, _currentTreeNode);
     nodeIndex2.push('closed');
     traverse(_treeData).set(nodeIndex2, false);
     nodeIndex.push('children');
@@ -52,112 +52,125 @@ function _saveTreeNew(_treeData, treeNode, _currentTreeNode, location) {
     tIndex = nodeIndex.pop();
     children = traverse(_treeData).get(nodeIndex);
   } else {
-    tIndex = nodeIndex[0];
+    [tIndex] = nodeIndex;
     children = _treeData;
   }
   switch (location) {
-    case 'before': break;
+    case 'before':
+      break;
     case 'after': {
-      let cLength = children.length;
+      const cLength = children.length;
       tIndex = tIndex < cLength ? tIndex + 1 : cLength;
       break;
     }
-    case 'child': tIndex = 0; break;
+    case 'child':
+      tIndex = 0;
+      break;
+    default: break;
   }
   children.splice(tIndex, 0, Object.assign({}, newNode));
   if (isNotRoot) traverse(_treeData).set(nodeIndex, children);
   else _treeData = children;
   const selectTreeNodeData = _selectTreeNode(_treeData, _currentTreeNode, newNode);
-  const returnData = Object.assign(selectTreeNodeData, {newNodeID: {nextID: nextNodeID, nodeID: newNodeID}});
+  const returnData = Object.assign(selectTreeNodeData, { newNodeID: { nextID: nextNodeID, nodeID: newNodeID } });
   return returnData;
 }
 
 function _saveTreeEdit(_treeData, treeNode) {
-  let nodeIndex = _getNodeIndex(_treeData, treeNode);
+  const nodeIndex = _getNodeIndex(_treeData, treeNode);
   traverse(_treeData).set(nodeIndex, Object.assign({}, treeNode));
-  return {treeData: _treeData, currentTreeNode: treeNode, showTreeEdit: false};
+  return { treeData: _treeData, currentTreeNode: treeNode, showTreeEdit: false };
 }
 
 function _moveTreeItem(_treeData, _currentTreeNode, action) {
-  let nodeIndex = _getNodeIndex(_treeData, _currentTreeNode);
+  const nodeIndex = _getNodeIndex(_treeData, _currentTreeNode);
   let tIndex;
   let children;
-  let isNotRoot = (nodeIndex.length > 1);
+  const isNotRoot = nodeIndex.length > 1;
   if (isNotRoot) {
     tIndex = nodeIndex.pop();
     children = traverse(_treeData).get(nodeIndex);
-  }
-  else {
-    tIndex = nodeIndex[0];
+  } else {
+    [tIndex] = nodeIndex;
     children = _treeData;
   }
-  let currentIndex = tIndex;
+  const currentIndex = tIndex;
   switch (action) {
-    case 'MoveNodeUp': tIndex = tIndex > 0 ? tIndex - 1 : 0; break;
+    case 'MoveNodeUp':
+      tIndex = tIndex > 0 ? tIndex - 1 : 0;
+      break;
     case 'MoveNodeDown': {
-      let cLength = children.length;
+      const cLength = children.length;
       tIndex = tIndex < cLength ? tIndex + 1 : cLength;
       break;
     }
-    case 'RemoveNode': tIndex = tIndex > 0 ? tIndex - 1 : 0; break;
+    case 'RemoveNode':
+      tIndex = tIndex > 0 ? tIndex - 1 : 0;
+      break;
+    default: break;
   }
-  if (tIndex != currentIndex || action == 'RemoveNode') {
-    let data = children.splice(currentIndex, 1);
-    if (action == 'RemoveNode') {
-      let newNode = children[tIndex];
+  if (tIndex !== currentIndex || action === 'RemoveNode') {
+    const data = children.splice(currentIndex, 1);
+    if (action === 'RemoveNode') {
+      const newNode = children[tIndex];
       if (newNode != null) _currentTreeNode = newNode;
-    }
-    else children.splice(tIndex, 0, data[0]);
+    } else children.splice(tIndex, 0, data[0]);
     if (isNotRoot) traverse(_treeData).set(nodeIndex, children);
     else _treeData = children;
-    
-    return {treeData: _treeData, currentTreeNode: _currentTreeNode};
   }
+  return { treeData: _treeData, currentTreeNode: _currentTreeNode };
 }
 
 function _getNodeIndex(_treeData, treeNode) {
   let treeData = _treeData;
-  let nodeID = treeNode.nodeid;
-  if (lodash.isEmpty(nodeID)) { return []; }
+  const nodeID = treeNode.nodeid;
+  if (lodash.isEmpty(nodeID)) {
+    return [];
+  }
 
-  let nodeIdArray = nodeID.split('.'),
-    searchID = nodeIdArray.shift(),
-    nodeIndex = [],
-    index,
-    nextSearchID;
+  const nodeIdArray = nodeID.split('.');
+  let searchID = nodeIdArray.shift();
+  const nodeIndex = [];
+  let index;
+  let nextSearchID;
 
   while (searchID) {
-    if (!treeData) { return []; }
-    let treeItem = lodash.find(treeData, {nodeid: searchID});
+    if (!treeData) {
+      return [];
+    }
+    const treeItem = lodash.find(treeData, { nodeid: searchID });
     index = lodash.indexOf(treeData, treeItem);
-    if (index < 0) { return []; }
+    if (index < 0) {
+      return [];
+    }
     nodeIndex.push(index);
     nextSearchID = nodeIdArray.shift();
     if (nextSearchID) {
-      searchID += '.' + nextSearchID;
+      searchID += `.${nextSearchID}`;
       treeData = treeData[index].children;
-      if (treeData) { nodeIndex.push('children'); }
-    }
-    else searchID = nextSearchID;
+      if (treeData) {
+        nodeIndex.push('children');
+      }
+    } else searchID = nextSearchID;
   }
 
   return nodeIndex;
 }
 
 function _selectTreeNode(_treeData, _currentTreeNode, treeNode) {
-  let nodeIndex1 = _getNodeIndex(_treeData, _currentTreeNode);
+  const nodeIndex1 = _getNodeIndex(_treeData, _currentTreeNode);
   nodeIndex1.push('selected');
   traverse(_treeData).set(nodeIndex1, false);
   _currentTreeNode = treeNode;
-  let nodeIndex2 = _getNodeIndex(_treeData, _currentTreeNode);
+  const nodeIndex2 = _getNodeIndex(_treeData, _currentTreeNode);
   nodeIndex2.push('selected');
   traverse(_treeData).set(nodeIndex2, true);
 
-  return {treeData: _treeData, currentTreeNode: _currentTreeNode};
+  return { treeData: _treeData, currentTreeNode: _currentTreeNode };
 }
 
 function _setTreeNodeClosed(_treeData, treeNode) {
-  let nodeIndex = _getNodeIndex(_treeData, treeNode);
+  const nodeIndex = _getNodeIndex(_treeData, treeNode);
   nodeIndex.push('closed');
   let visible = traverse(_treeData).get(nodeIndex);
   if (typeof visible === 'undefined') visible = false;
@@ -165,53 +178,60 @@ function _setTreeNodeClosed(_treeData, treeNode) {
   if (visible) traverse(_treeData).set(nodeIndex, true);
   else traverse(_treeData).set(nodeIndex, false);
 
-  return {treeData: _treeData};
+  return { treeData: _treeData };
 }
 
 const initialTreeState = {
   newNodeID: 0,
   treeData: [{}],
-  currentTreeNode: {title: 'not selected'},
+  currentTreeNode: { title: 'not selected' },
   showTreeEdit: false,
-  showTreeNew: false
+  showTreeNew: false,
 };
 
 export default function handleActions(state = initialTreeState, action) {
-  let treeCopy = state.treeData.slice(0);
-  let currentCopy = Object.assign({}, state.currentTreeNode);
+  const treeCopy = state.treeData.slice(0);
+  const currentCopy = Object.assign({}, state.currentTreeNode);
   switch (action.type) {
     case 'ApiGetTreeDataDone': {
-      let gotTreeData = _gotTreeView(action.data);
-      return {...state, ...gotTreeData};
+      const gotTreeData = _gotTreeView(action.data);
+      return { ...state, ...gotTreeData };
     }
-    case 'ShowNew': return {...state, showTreeNew: true};
-    case 'ShowEdit': return {...state, showTreeEdit: true};
-    case 'CancelEdit': return {...state, showTreeEdit: false};
-    case 'CancelNew': return {...state, showTreeNew: false};
+    case 'ShowNew':
+      return { ...state, showTreeNew: true };
+    case 'ShowEdit':
+      return { ...state, showTreeEdit: true };
+    case 'CancelEdit':
+      return { ...state, showTreeEdit: false };
+    case 'CancelNew':
+      return { ...state, showTreeNew: false };
     case 'MoveNodeUp':
     case 'MoveNodeDown':
     case 'RemoveNode': {
-      let moveTreeData = _moveTreeItem(treeCopy, currentCopy, action.type);
-      return {...state, ...moveTreeData};
+      const moveTreeData = _moveTreeItem(treeCopy, currentCopy, action.type);
+      return { ...state, ...moveTreeData };
     }
     case 'SelectTreeNode': {
-      let selectTreeData = _selectTreeNode(treeCopy, currentCopy, action.node);
-      return {...state, ...selectTreeData};
+      const selectTreeData = _selectTreeNode(treeCopy, currentCopy, action.node);
+      return { ...state, ...selectTreeData };
     }
     case 'SetTreeNodeClosed': {
-      let closedTreeData = _setTreeNodeClosed(treeCopy, action.node);
-      return {...state, ...closedTreeData};
+      const closedTreeData = _setTreeNodeClosed(treeCopy, action.node);
+      return { ...state, ...closedTreeData };
     }
     case 'SaveTreeEdit': {
-      let editTreeData = _saveTreeEdit(treeCopy, action.node);
-      return {...state, ...editTreeData};
+      const editTreeData = _saveTreeEdit(treeCopy, action.node);
+      return { ...state, ...editTreeData };
     }
     case 'SaveTreeNew': {
-      let newTreeData = _saveTreeNew(treeCopy, action.node, currentCopy, action.location, state.nextID);
+      const newTreeData = _saveTreeNew(treeCopy, action.node, currentCopy, action.location, state.nextID);
       newTreeData.showTreeNew = false;
-      return {...state, ...newTreeData};
+      return { ...state, ...newTreeData };
     }
-    case 'SetNextNodeID': _nextID = action.nodeID; return state;
-    default: return state;
+    case 'SetNextNodeID':
+      _nextID = action.nodeID;
+      return state;
+    default:
+      return state;
   }
 }

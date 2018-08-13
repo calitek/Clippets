@@ -1,20 +1,21 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { JTreeView } from 'jms-react-components';
 
-import {selectTreeNode, setTreeNodeClosed} from '../../store/tree.Actions';
-import {JTreeView} from 'jms-react-components';
+import { selectTreeNode, setTreeNodeClosed } from '../../store/tree.Actions';
 
-const TreeList = props => {
-  const iconHandler = node => {
+const TreeList = (props) => {
+  const iconHandler = (node) => {
     props.setTreeNodeClosed(node);
   };
-  const clickHandler = node => {
+  const clickHandler = (node) => {
     props.selectTreeNode(node);
   };
-  let options = {
-    icon: {sun: 'dev', leaf: 'home', snow: 'sys'},
-    typeName: ['node', 'type']
+  const options = {
+    icon: { sun: 'dev', leaf: 'home', snow: 'sys' },
+    typeName: ['node', 'type'],
   };
   return (
     <div>
@@ -23,8 +24,14 @@ const TreeList = props => {
   );
 };
 
+TreeList.propTypes = {
+  treeData: PropTypes.array,
+  setTreeNodeClosed: PropTypes.func,
+  selectTreeNode: PropTypes.func,
+};
+
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({selectTreeNode, setTreeNodeClosed}, dispatch);
+  return bindActionCreators({ selectTreeNode, setTreeNodeClosed }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(TreeList);

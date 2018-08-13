@@ -1,6 +1,6 @@
 {
-  "name": "Clippets",
-  "version": "1.0.0",
+  "name": "clippets",
+  "version": "18.5.16",
   "description": "A simple snippets organizer and ui.",
   "license": "MIT",
   "main": "main.js",
@@ -10,8 +10,8 @@
     "react"
   ],
   "author": {
-    "name": "Janaka Stevens",
-    "email": "jmstevens@calitek.com"
+    "name": "J Mark Stevens",
+    "email": "mark@jmarkstevens.com"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,10 @@
     "node": "nodemon --watch js js/server.js",
     "test": "mocha __tests__/.setup.js __tests__/**/*.test.js?",
     "testw": "npm test -- --watch",
-    "ww": "webpack --progress --profile --colors --env.noMinimize --watch",
-    "nw": "webpack --progress --profile --colors --env.noMinimize",
-    "build": "webpack --progress --profile --colors --env.production"
+    "ww": "webpack --config wp/wp.config.js --progress --profile --colors --env.noMinimize --watch",
+    "nw": "webpack --config wp/wp.config.js --progress --profile --colors --env.noMinimize",
+    "build": "webpack --config wp/wp.config.js --progress --profile --colors --env.production",
+    "dist": "electron-builder"
   },
   "bugs": {
     "url": "https://github.com/calitek/Clippets/issues"
@@ -32,41 +33,24 @@
   "dependencies": {
     "async": "latest",
     "copy-paste": "latest",
-    "express": "latest",
-    "serve-favicon": "latest",
     "socket.io": "latest"
   },
   "devDependencies": {
-    "babel-core": "latest",
-    "babel-loader": "^6.1.0",
-    "babel-preset-es2015": "latest",
-    "babel-preset-react": "latest",
-    "babel-preset-stage-0": "latest",
-    "babel-register": "latest",
-    "chai": "latest",
-    "chai-http": "latest",
-    "css-loader": "latest",
     "electron": "latest",
-    "enzyme": "latest",
-    "extract-text-webpack-plugin": "^2.0.0-rc.3",
-    "file-loader": "latest",
+    "electron-builder": "^20.27.1",
     "jms-react-components": "file:../../Patterns/jms-react-components",
-    "jsdom": "latest",
-    "loader-utils": "latest",
-    "lodash": "latest",
-    "mocha": "latest",
     "nodemon": "latest",
-    "react": "^15.4.0",
-    "react-addons-test-utils": "^15.4.0",
-    "react-dom": "^15.4.0",
     "react-redux": "latest",
     "redux": "latest",
     "redux-logger": "latest",
-    "redux-mock-store": "latest",
     "redux-thunk": "latest",
-    "sinon": "latest",
-    "style-loader": "^0.13.1",
     "traverse": "latest",
-    "webpack": "latest"
+    "webpack": "^3.0.0"
+  },
+  "build": {
+    "appId": "com.clippets.app",
+    "win": {
+      "target": "portable"
+    }
   }
 }

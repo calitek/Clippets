@@ -1,19 +1,20 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { JButton } from 'jms-react-components';
 
-import {apiSetClipboard} from '../../store/api.Actions';
-import {selectSnipItem} from '../../store/snip.Actions';
-import {JButton} from 'jms-react-components';
+import { apiSetClipboard } from '../../store/api.Actions';
+import { selectSnipItem } from '../../store/snip.Actions';
 
 const SelectSnipButtonSty = {
-  backgroundColor: '#213919',
   border: '0px',
+  borderRadius: '.2em',
   cursor: 'pointer',
-  height: '1.5em',
+  height: '1em',
   margin: '0 0px 0 0',
   padding: '0px',
-  width: '1.5em'
+  width: '1em',
 };
 
 const SnipButtonSty = {
@@ -24,14 +25,14 @@ const SnipButtonSty = {
   right: '58px',
   position: 'absolute',
   width: 'calc(70% - 100px)',
-  zIndex: '2'
+  zIndex: '2',
 };
 
-const selectSnipBtn = {buttonid: 'selectSnip', reStyle: SelectSnipButtonSty};
-const SnipBtn = {buttonid: 'SnipBtn', reStyle: SnipButtonSty};
+const selectSnipBtn = { buttonid: 'selectSnip', reStyle: SelectSnipButtonSty };
+const SnipBtn = { buttonid: 'SnipBtn', reStyle: SnipButtonSty };
 
 const SnipDivSty = {
-  borderBottom: '1px solid #213919',
+  borderBottom: '0px solid #213919',
   fontSize: '1em',
   height: '1.5em',
   lineHeight: '1.5em',
@@ -39,36 +40,55 @@ const SnipDivSty = {
   overflow: 'hidden',
   paddingTop: '1px',
   textWrap: 'none',
-  whiteSpace: 'nowrap'
+  whiteSpace: 'nowrap',
 };
 
 const SelectSnipDivSty = {
   height: '24px',
   paddingLeft: '2px',
   paddingTop: '4px',
-  width: '24px'
+  width: '24px',
 };
 
-const SnipListItem = props => {
-  const snipClickHandler = buttonid => {
+const SnipListItem = (props) => {
+  const snipClickHandler = (buttonid) => {
     props.selectSnipItem(props.snippet);
-    if (buttonid == 'SnipBtn') props.apiSetClipboard(props.snippet.snip);
+    if (buttonid === 'SnipBtn') props.apiSetClipboard(props.snippet.snip);
   };
-  let SnipSpanSty = {width: 'calc(70% - 142px)'};
-  SnipSpanSty.color = props.index === props.selectedKey ? '#b58900' : '#afac87';
+  const SnipSpanSty = { width: 'calc(70% - 142px)' };
+  SnipSpanSty.color = props.index === props.selectedKey ? '#cfc' : '#beb';
+  selectSnipBtn.assignStyle = { backgroundColor: props.index === props.selectedKey ? '#4B0082' : '#beb' };
   return (
-    <div id="SnipDivSty" onClick={snipClickHandler} className="FlexBox" style={SnipDivSty}>
+    <div
+      className="FlexBox"
+      id="SnipDivSty"
+      onClick={snipClickHandler}
+      onKeyPress={snipClickHandler}
+      role="button"
+      style={SnipDivSty}
+      tabIndex={0}
+    >
       <div id="SelectSnipDivSty" style={SelectSnipDivSty}>
         <JButton btn={selectSnipBtn} parentClickHandler={snipClickHandler} />
       </div>
-      <span id="SnipSpanSty" style={SnipSpanSty}>{props.snippet.snip}</span>
+      <span id="SnipSpanSty" style={SnipSpanSty}>
+        {props.snippet.snip}
+      </span>
       <JButton btn={SnipBtn} parentClickHandler={snipClickHandler} />
     </div>
   );
 };
 
+SnipListItem.propTypes = {
+  selectSnipItem: PropTypes.func,
+  index: PropTypes.number,
+  selectedKey: PropTypes.number,
+  snippet: PropTypes.object,
+  apiSetClipboard: PropTypes.func,
+};
+
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({selectSnipItem, apiSetClipboard}, dispatch);
+  return bindActionCreators({ selectSnipItem, apiSetClipboard }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(SnipListItem);

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import SnipListItem from './snip.listitem';
@@ -6,16 +7,17 @@ const SnipsDivSty = {
   cursor: 'pointer',
   height: 'calc(((100% - 40px) * .6) - 5px)',
   minHeight: '13em',
-  overflowY: 'auto'
+  overflowY: 'auto',
 };
 
-const SnipsDivLiSty = {listStyleType: 'none', color: '#afac87'};
-const SnipsDivUlSty = {margin: '0px', WebkitPaddingStart: '0px'};
+const SnipsDivLiSty = { listStyleType: 'none', color: '#afac87' };
+const SnipsDivUlSty = { margin: '0px', WebkitPaddingStart: '0px' };
 
-export default ({data, selectedKey}) => {
-  let list = data.map((snip, index) => {
+const SnipList = ({ data, selectedKey }) => {
+  const list = data.map((snip, index) => {
+    const key = index + 1;
     return (
-      <li id="SnipsDivLiSty" key={index} style={SnipsDivLiSty}>
+      <li id="SnipsDivLiSty" key={key} style={SnipsDivLiSty}>
         <SnipListItem snippet={snip} index={index} selectedKey={selectedKey} />
       </li>
     );
@@ -28,3 +30,10 @@ export default ({data, selectedKey}) => {
     </div>
   );
 };
+
+SnipList.propTypes = {
+  data: PropTypes.array,
+  selectedKey: PropTypes.number,
+};
+
+export default SnipList;

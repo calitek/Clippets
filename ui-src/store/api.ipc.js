@@ -1,15 +1,28 @@
 import * as Actions from './api.Actions';
 
 export function ipcMiddleware(store) {
-  return (next) => (action) => {
+  return next => (action) => {
     if (ipc) {
       switch (action.type) {
-        case 'ApiGetTreeData': ipc.send('client:GetTreeData', {}); break;
-        case 'ApiSetTreeData': ipc.send('client:SetTreeData', action.data); break;
-        case 'ApiGetSnipData': ipc.send('client:GetSnipData', action.data); break;
-        case 'ApiSetSnipData': ipc.send('client:SetSnipData', action.data); break;
-        case 'ApiGetClipboard': store.dispatch(Actions.apiGetClipboardDone(clipboard.readText())); break;
-        case 'ApiSetClipboard': clipboard.writeText(action.clip); break;
+        case 'ApiGetTreeData':
+          ipc.send('client:GetTreeData', {});
+          break;
+        case 'ApiSetTreeData':
+          ipc.send('client:SetTreeData', action.data);
+          break;
+        case 'ApiGetSnipData':
+          ipc.send('client:GetSnipData', action.data);
+          break;
+        case 'ApiSetSnipData':
+          ipc.send('client:SetSnipData', action.data);
+          break;
+        case 'ApiGetClipboard':
+          store.dispatch(Actions.apiGetClipboardDone(clipboard.readText()));
+          break;
+        case 'ApiSetClipboard':
+          clipboard.writeText(action.clip);
+          break;
+        default: break;
       }
     }
     return next(action);

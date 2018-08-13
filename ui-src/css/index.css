@@ -1,10 +1,10 @@
 .bodyStyle {
-  background-color: #1A3212;
-  color: #afac87;
+  background-color: #242;
+  color: #eae3ea;
   display: block;
   height: 100vh;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
 }
 
 .header {
@@ -14,29 +14,68 @@
   text-align: center;
 }
 
-.Title {font-size: 1.3em;}
+.Title {
+  font-size: 1.3em;
+}
 
 .content {
-  height: calc(100% - 52px);
-  padding: 0px 5px;
-}
-
-.divHeight {
   height: 100%;
-  margin: 0;
-  padding: 0;
+  padding: 0 5px;
 }
 
-.lightBackGround { background-color: #e1ded5; }
-* { outline: none; }
+.contentPage {
+  margin: 5px auto;
+  max-width: 1366px;
+}
 
-.a{display:block}
+* {
+  outline: none;
+}
+
+.a {
+  display: block
+}
+
+[hidden] { display: none !important;}
 
 .FlexBox {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
+}
+
+.FlexBoxC {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+}
+
+.FlexBoxCenter {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+}
+
+.FlexBoxJustAround {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+}
+
+.FlexBoxJustBetween {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .FlexBoxWrap {
@@ -52,4 +91,18 @@
   justify-content: space-between;
 }
 
-.HighZ {z-index: 200;}
+.FlexBoxStretch {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-content: stretch;
+}
+
+.FlexItem {
+  flex-grow: 1;
+}
+
+.HighZ {
+  z-index: 200;
+}

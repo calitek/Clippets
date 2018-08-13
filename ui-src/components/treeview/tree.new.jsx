@@ -1,19 +1,24 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { JButton } from 'jms-react-components';
 
 import TreeDetail from './tree.detail';
-import {saveTreeNew, treeActions} from '../../store/tree.Actions';
-import {JButton} from 'jms-react-components';
+import { saveTreeNew, treeActions } from '../../store/tree.Actions';
 
-const newBeforeBtn = {buttonid: 'before', text: 'New Before', assignStyle: {width: '92px'}};
-const newAfterBtn = {buttonid: 'after', text: 'New After', assignStyle: {width: '92px'}};
-const newChildBtn = {buttonid: 'child', text: 'New Child', assignStyle: {width: '92px'}};
-const cancelNewBtn = {buttonid: 'cancel', text: 'Cancel', assignStyle: {width: '92px'}};
+const newBeforeBtn = { buttonid: 'before', text: 'New Before', assignStyle: { width: '92px' } };
+const newAfterBtn = { buttonid: 'after', text: 'New After', assignStyle: { width: '92px' } };
+const newChildBtn = { buttonid: 'child', text: 'New Child', assignStyle: { width: '92px' } };
+const cancelNewBtn = { buttonid: 'cancel', text: 'Cancel', assignStyle: { width: '92px' } };
 
 class TreeNew extends React.Component {
-  state = {treeNode: {nodeid: '', title: '', type: 'dev', selected: false, children: []}};
-  clickHandler = buttonid => {
+  state = {
+    treeNode: {
+      nodeid: '', title: '', type: 'dev', selected: false, children: [],
+    },
+  };
+  clickHandler = (buttonid) => {
     switch (buttonid) {
       case 'before':
       case 'after':
@@ -23,13 +28,14 @@ class TreeNew extends React.Component {
       case 'cancel':
         this.props.treeActions('cancelNew');
         break;
+      default: break;
     }
   };
   handleChange = (field, value) => {
-    let node = this.state.treeNode;
-    if (field == 'title') node.title = value;
-    if (field == 'type') node.type = value;
-    this.setState({treeNode: node});
+    const node = this.state.treeNode;
+    if (field === 'title') node.title = value;
+    if (field === 'type') node.type = value;
+    this.setState({ treeNode: node });
   };
   render() {
     if (this.props.hide) return null;
@@ -53,8 +59,14 @@ class TreeNew extends React.Component {
   }
 }
 
+TreeNew.propTypes = {
+  hide: PropTypes.bool,
+  saveTreeNew: PropTypes.func,
+  treeActions: PropTypes.func,
+};
+
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({saveTreeNew, treeActions}, dispatch);
+  return bindActionCreators({ saveTreeNew, treeActions }, dispatch);
 }
 
 export default connect(null, mapDispatchToProps)(TreeNew);
