@@ -1,6 +1,6 @@
 {
   "name": "clippets",
-  "version": "18.5.16",
+  "version": "18.5.18",
   "description": "A simple snippets organizer and ui.",
   "license": "MIT",
   "main": "main.js",
@@ -50,6 +50,7 @@
   "build": {
     "appId": "com.clippets.app",
     "win": {
+      "icon": "ui-dist/Clippets1.ico",
       "target": "portable"
     }
   }

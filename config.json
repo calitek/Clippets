@@ -1,18 +1,18 @@
 {
-  "darwinApp": {
+  "darwinApp0": {
     "dataRoot": "/Kykas/Projects/Clippets/data/"
   },
-  "darwinApp0": {
+  "darwin": {
     "dataRoot": "/Google Drive/Kykas/ClippetsData/"
   },
-  "darwin": {
+  "darwinApp2": {
     "dataRoot": "/Kykas/ClippetsData/"
   },
   "linux": {
     "dataRoot": "/var/www/Clippets/data/"
   },
   "win32": {
-    "dataRoot": "/Kykas/Projects/Clippets/data/"
+    "dataRoot": "/Google Drive/Kykas/ClippetsData/"
   },
   "winProjectRoot": "/Kykas/Projects/Clippets"
 }

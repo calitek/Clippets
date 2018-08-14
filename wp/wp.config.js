@@ -51,10 +51,6 @@ module.exports = (env) => {
           loader: 'file-loader?name=img/[name].[ext]',
         },
         {
-          test: /\.(icon)$/,
-          loader: 'file-loader?name=icon.ico',
-        },
-        {
           test: /\.(html|pdf)$/,
           loader: 'file-loader?name=[name].[ext]',
         },

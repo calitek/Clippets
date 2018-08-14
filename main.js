@@ -11,7 +11,7 @@ switch (process.platform) {
     configRoot = config.linux.dataRoot;
     break;
   case 'win32':
-    configRoot = process.env.USERPROFILE + config.win32.dataRoot;
+    configRoot = `${process.env.USERPROFILE}${config.win32.dataRoot}win-`;
     break;
   default: break;
 }
